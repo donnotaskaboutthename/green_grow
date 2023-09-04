@@ -8,9 +8,11 @@ To address the challenges faced by the agriculture industry, we set out to desig
 Our feedback control system is sustainable and cost-effective, as it utilizes inexpensive and readily available components. The Arduino Uno is affordable and widely available, making it easy to implement, even for those with minimal programming expertise. We also incorporated a method for data collection by using an Excel sheet to track the measurable units from our project.
 # Methods
   The development of our barley nursery prototype comprised three main stages.The first stage involved the creation of the hardware components, including the construction of the main body, the installation of the Arduino board, sensors, pumps, and all other necessary hardware components. During this stage, we installed TEC to stabilize our modified fans for cooling and warming our nursery, arranged the lights inside the body to optimize light distribution, and designed the water sprayer for efficient water division. The plastic body box (nursery) was then completed.
+  
   ![Picture1](https://github.com/donnotaskaboutthename/green_grow/assets/134716142/53c5d133-16c5-4959-84be-676b26e8b436)
-
-    In the second stage, we connected the sensors of DHT11 and LDR to the Arduino board to collect data on temperature, moisture, and light levels inside the nursery. The Arduino board was connected to two motor drivers and a relay to regulate the pumps, TEC fans, and two sprayers.
+   
+   In the second stage, we connected the sensors of DHT11 and LDR to the Arduino board to collect data on temperature, moisture, and light levels inside the nursery. The Arduino board was connected to two motor drivers and a relay to regulate the pumps, TEC fans, and two sprayers.
+    
   ![image](https://github.com/donnotaskaboutthename/green_grow/assets/134716142/d339ed2f-7571-46c5-b7c1-4eb10aac905b)
 
   In the third stage, we created software code to control the hardware components. We first set up the DHT11 sensor library and defined our variables in the void setup beforewriting code pages for all necessary functions. These functions were then linked together in the void loop. An if statement was included to control the humidity and temperature; for instance, when the temperature exceeded 25 Celsius, the cooling fan would turn on until it reached 20 Celsius. Similarly, if the humidity dropped below 80%, the pump was activated until it reached 85%. The readings were monitored by the serial monitor and exported to Excel sheets to produce necessary data graphs. 
