@@ -27,4 +27,5 @@ After completing the prototype, we conducted a five-day test plan to evaluate it
 
    We solved the problems in the first test plan to get more great result, this problem wasn’t in our system it was in the way and steps of planting the barley. The solution is that we submerged the barley for 12 hours in the water before starting the planting process.
 ![image](https://github.com/donnotaskaboutthename/green_grow/assets/134716142/c05644f2-d2d7-49d1-83af-f86bd14ecac1)
-  Generally, we solved the problems and increasing our project  good results by detecting the operation errors through feedback controlling system as shown in figure.
+  Generally, we solved the problems and increasing our project  good results by detecting the operation errors through feedback controlling system as shown in the figure.
+![image](https://github.com/donnotaskaboutthename/green_grow/assets/134716142/41dbf9e5-1e2a-4c75-8e35-14bc6faeefbd)
