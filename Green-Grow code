@@ -1,1 +1,110 @@
+#include <dht.h>
+#define dht_apin A0 
+dht DHT;
+
+// Define the lamp control pin
+
+
+//unsigned long startMillis;
+
+// Define the threshold value for turning the lamp on/off
+
+// Define the start time for calculating the duration
+long time1 , time2 , time3 ,time4 ;
+
+void setup(){
+ pinMode(2,OUTPUT);
+ pinMode(4,OUTPUT);
+ pinMode(8,OUTPUT);
+ pinMode(13,OUTPUT);
+  Serial.begin(9600);
+  delay(5000);
+Serial.print("Date&Time ,LDR intensity ,Humidity ,Temperature in C");
+
+  
+  delay(1000);//Wait before accessing Sensor
+  // Set the lamp control pin as an output
+  pinMode(10, OUTPUT);
+  
+Serial.begin(9600);  // initialize serial communication with the Arduino
+  time1=millis();
+   
+}//end "setup()"
+
+
+void loop(){
+if (millis()-time1>=1000){
+time1=millis();
+ dht();
+}
+else if (millis()-time2>=200){
+time2=millis();
+ldr();
+}
+
+
+delay(100);
+
+}// end loop() 
+
+void dht(){
+  //Start of Program 
+ 
+  DHT.read11(dht_apin);
+    
+
+  if (DHT.temperature >= 20 and DHT.humidity <=80) {
+
+   digitalWrite(4, HIGH);
+   digitalWrite (2, HIGH);
+   digitalWrite(8, LOW);
+  
+  }
+   else if (DHT.temperature <= 18 and DHT.humidity <= 80) {
+
+   digitalWrite(4, LOW);
+   digitalWrite (2, HIGH);
+   digitalWrite(8, HIGH);
+  }
+   else if (DHT.temperature >= 20 and DHT.humidity >= 85) {
+
+   digitalWrite(4, HIGH);
+   digitalWrite (2, LOW  );
+   digitalWrite(8, LOW);
+  }
+   else if (DHT.temperature <= 18 and DHT.humidity >= 85) {
+
+   digitalWrite(4, LOW);
+   digitalWrite (2, LOW);
+   digitalWrite(8, HIGH); 
+  }
+  
+ 
+  
+}// end loop()
+
+
+void ldr() {
+
+delay(100);  
+int x=analogRead(A1);
+Serial.print(",");
+  Serial.print(DHT.humidity);
+    Serial.print(",");
+   Serial.println(DHT.temperature);
+   Serial.print(",");
+Serial.print(x);
+
+if (x < 100) {
+    digitalWrite(13, LOW); // Turn on the lamp
+  
+  } else {
+    digitalWrite(13, HIGH); // Turn off the lamp
+  
+  }
+
+  // Delay for a short time to avoid flickering
+  delay(100);
+}
+
 
