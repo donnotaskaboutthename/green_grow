@@ -29,3 +29,8 @@ After completing the prototype, we conducted a five-day test plan to evaluate it
 ![image](https://github.com/donnotaskaboutthename/green_grow/assets/134716142/c05644f2-d2d7-49d1-83af-f86bd14ecac1)
   Generally, we solved the problems and increasing our project  good results by detecting the operation errors through feedback controlling system as shown in the figure.
 ![image](https://github.com/donnotaskaboutthename/green_grow/assets/134716142/41dbf9e5-1e2a-4c75-8e35-14bc6faeefbd)
+
+# Conclusion 
+  The prototype test results, and analysis have allowed us to draw conclusions regarding the performance of the Barley Nursery with the feedback control system. We confirmed that the prototype met the three design requirements of mass production, energy consumption sustainability, and data collection. To improve mass production, we controlled the temperature, humidity, and light using LDR and DHT11 sensors to regulate the lamps, pumps, and fans. We have also focused on decreasing energy consumption by ensuring that these devices work only when needed. To meet the data collection requirement, we utilized the Tera term application and Excel to extract data readings from sensors continuously throughout the test plan and create data graphs. The prototype achieved a significant increase in mass production from 0.8 kg to 5 kg in five days, representing a six-fold increase compared to regular barley cultivation in a closed area, which produced 0.3 kg to 1 kg in seven days, an increase of three times its initial mass.
+![image](https://github.com/donnotaskaboutthename/green_grow/assets/134716142/e382c661-1db1-41f1-b2cb-42ff682d0187)
+
